@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <style>
+        /* Center the container both horizontally and vertically */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container for text and cards */
+        .container {
+            text-align: center;
+        }
+
+        /* Basic CSS styles for the product card */
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain image aspect ratio and cover container */
+        }
+
+        .product-title {
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            padding: 0 10px 10px;
+        }
+
+        .product-price {
+            padding: 10px;
+            font-weight: bold;
+            color: #007bff; /* Blue color for the price */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Centered Paragraph -->
+        <p style="font-size: 24px;">{{disc}}</p>
+
+        <!-- First Product -->
+        <div class="product-card">
+            <div class="product-image">
+                <img [src]="img1" alt="Product Image 1">
+            </div>
+            <div class="product-title">
+                {{game1}}
+            </div>
+            <div class="product-description">
+            </div>
+            <div class="product-price">
+                $19.99
+            </div>
+            <button type="button" class="btn btn-success" (click)="print()">click</button>
+        </div>
+
+        <!-- Second Product -->
+        <div class="product-card">
+            <div class="product-image">
+                <img [src]="img2" alt="Product Image 2">
+            </div>
+            <div class="product-title">
+                {{game2}}
+            </div>
+            <div class="product-description">
+            </div>
+            <div class="product-price">
+                $29.99
+            </div>
+        </div>
+    </div>
+</body>
+</html>
